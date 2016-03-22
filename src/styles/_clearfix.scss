@@ -1,0 +1,14 @@
+@mixin clearfix() {
+  &::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin childclearfix() {
+  //Странный фикс, чтобы clear:left не отключал sidebar
+  // https://stackoverflow.com/questions/12168396/css-child-clearing-parent-float
+  overflow: auto;
+  overflow-x: hidden;
+}

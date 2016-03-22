@@ -1,0 +1,54 @@
+doctype html
+html(lang="en")
+  head
+    title Cloud Castle
+  body
+    header.header
+        .header__container
+            a(href="/").header__logo
+                img(src="/assets/logo.svg", alt="Cloud Castle")
+            ul.menu.header__menu
+                li.menu__item: a(href="#about").menu__link About
+                li.menu__item: a(href="#meetings").menu__link Meetings
+                li.menu__item: a(href="#events").menu__link Events
+                li.menu__item: a(href="#projects").menu__link Projects
+                li.menu__item: a(href="#contact-us").menu__link Contact Us
+                li.menu__item
+                    a(href="https://twitter.com/castledigital", target="_blank", title="Twitter").menu__link
+                        img(src="/assets/twitter.svg", alt="Twitter")
+                li.menu__item
+                    a(href="http://facebook.com/cloudcastler", target="_blank", title="Facebook").menu__link
+                        img(src="/assets/facebook.svg", alt="Facebook")
+                li.menu__item
+                    a(href="//cloudcastle.ru" title="Go to russian version").menu__link.menu__link_language EN
+
+    .banner
+        a(href="#team")
+            .banner__title Team
+            .banner__text A team comprises a group of people or animals linked in a common purpose.
+
+    footer.footer
+        .footer__contacts
+            p.footer__phone +1 866 498 3588
+            a(href="mailto:hello@cloudcastlegroup.com").footer__email hello@cloudcastlegroup.com
+            .footer__social
+                a(href="https://www.linkedin.com/company/9415080", target="_blank", title="LinkedIn").footer__social-link
+                    img(src="/assets/linkedin.svg", alt="LinkedIn")
+                a(href="https://twitter.com/castledigital", target="_blank", title="Twitter").footer__social-link
+                    img(src="/assets/twitter.svg", alt="Twitter")
+                a(href="http://facebook.com/cloudcastler", target="_blank", title="Facebook").footer__social-link
+                    img(src="/assets/facebook.svg", alt="Facebook")
+
+        .office-list.footer__offices
+            .office-list__item
+                .office-list__city New York, NY
+                .office-list__address 110 E 25th St.<br />New York, NY 10010
+            .office-list__item
+                .office-list__city Charlotte, NC
+                .office-list__address 2820 Selwyn Ave.<br />Suite 325<br />Charlotte, NC 28209
+            .office-list__item
+                .office-list__city Los Angeles, CA
+                .office-list__address 6121 Sunset Blvd.<br />Los Angeles, CA 90028
+            .office-list__item
+                .office-list__city Samara, Russia
+                .office-list__address Moskovskoe Hw. 4,<br />bld 15, floor 5<br />+7 (846) 313 2303
