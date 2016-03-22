@@ -2,8 +2,9 @@ doctype html
 html(lang="en")
   head
     title Cloud Castle
+    link(href='/assets/common.css', rel='stylesheet')
   body
-    header.header
+    header.header.header__fixed
         .header__container
             a(href="/").header__logo
                 img(src="/assets/logo.svg", alt="Cloud Castle")
@@ -14,18 +15,19 @@ html(lang="en")
                 li.menu__item: a(href="#projects").menu__link Projects
                 li.menu__item: a(href="#contact-us").menu__link Contact Us
                 li.menu__item
-                    a(href="https://twitter.com/castledigital", target="_blank", title="Twitter").menu__link
+                    a(href="https://twitter.com/castledigital", target="_blank", title="Twitter").menu__link.menu__link_icon
                         img(src="/assets/twitter.svg", alt="Twitter")
                 li.menu__item
-                    a(href="http://facebook.com/cloudcastler", target="_blank", title="Facebook").menu__link
+                    a(href="http://facebook.com/cloudcastler", target="_blank", title="Facebook").menu__link.menu__link_icon
                         img(src="/assets/facebook.svg", alt="Facebook")
                 li.menu__item
-                    a(href="//cloudcastle.ru" title="Go to russian version").menu__link.menu__link_language EN
+                    a(href="//cloudcastle.ru" title="Go to russian version").menu__link.menu__link_icon: span.header__language EN
 
-    .banner
-        a(href="#team")
-            .banner__title Team
-            .banner__text A team comprises a group of people or animals linked in a common purpose.
+    .content
+        .banner
+            a(href="#team")
+                .banner__title Team
+                .banner__text A team comprises a group of people or animals linked in a common purpose.
 
     footer.footer
         .footer__contacts

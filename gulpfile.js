@@ -37,6 +37,11 @@ gulp.task('styles', function () {
         .pipe(gulp.dest('app/assets'))
 });
 
+gulp.task('watch-styles', function () {
+    gulp.watch('src/styles/**/*.scss', ['styles']);
+});
+
+
 gulp.task('jade', function () {
     gulp.src('src/templates/**/*.jade')
         .pipe(plumber())
@@ -53,4 +58,4 @@ gulp.task('images', function(){
        .pipe(gulp.dest('app/assets'));
 });
 
-gulp.task('default', ['jade', 'styles', 'images', 'watch-jade', 'webserver']);
+gulp.task('default', ['jade', 'styles', 'images', 'watch-jade', 'watch-styles', 'webserver']);

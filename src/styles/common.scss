@@ -1,3 +1,11 @@
 @import "variables";
+@import "clearfix";
+@import "rem";
 @import "normalize";
 @import "base";
+
+//Блоки
+@import "menu";
+@import "header";
+@import "content";
+@import "footer";

@@ -4,3 +4,14 @@ $font-family-base: Arial;
 $font-size-root: 14px;
 
 $text-color: #000;
+$link-color: #000;
+$link-hover-color: #000;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 544px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1440px,
+) !default;

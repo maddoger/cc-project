@@ -1,0 +1,36 @@
+.header {
+}
+
+.header__fixed {
+  height: 80px;
+  .header__container {
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+}
+
+.header__container {
+  width: 100%;
+  background: rgba(248, 248, 248, 0.71);
+  @include rem(padding, 0 35px);
+  @include clearfix;
+}
+
+.header__logo {
+  line-height: 80px;
+}
+
+.header__menu {
+  float: right;
+}
+
+.header__language {
+  vertical-align: top;
+  background: #1e1a33;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-weight: bold;
+  padding: 1px 3px;
+}
