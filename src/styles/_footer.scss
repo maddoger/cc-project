@@ -1,7 +1,44 @@
 .footer {
   @include rem(margin, 40px 10px);
+  @include clearfix;
+  text-align: center;
 }
 
 .footer__contacts {
-  
+  display: inline-block;
+  @include rem(margin, 5px auto);
+  max-width: 200px;
+  text-align: center;
+}
+
+.footer__phone {
+  font-weight: bold;
+  @include rem-font-size(16px);
+}
+
+.footer__email {
+  display: block;
+  @include rem(margin, 5px 0);
+}
+
+.footer__social {
+  @include rem(margin, 20px 0);
+}
+
+.footer__social-link {
+  display: inline-block;
+  vertical-align: middle;
+  @include rem(margin, 0 10px);
+  line-height: 30px;
+}
+
+@include media-breakpoint-up(md) {
+  .footer__contacts, .footer__offices {
+    vertical-align: top;
+    display: inline-block;
+    text-align: left;
+  }
+  .footer__contacts {
+    @include rem(margin-right, 50px);
+  }
 }
