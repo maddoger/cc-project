@@ -52,13 +52,18 @@
   .menu__item {
     display: inline-block;
     vertical-align: top;
-    @include rem(margin, 0 20px);
+    @include rem(margin, 0 15px);
   }
   .menu__link {
     line-height: 80px;
   }
 }
-@include media-breakpoint-up(lg) {
+@include media-breakpoint-up(md, (md: 800px)) {
+  .menu__item {
+    @include rem(margin, 0 20px);
+  }
+}
+@include media-breakpoint-up(md, (md: 900px)) {
   .menu__item {
     @include rem(margin, 0 25px);
   }
