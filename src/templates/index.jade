@@ -1,27 +1,36 @@
 doctype html
 html(lang="en")
   head
+    meta(charset="utf-8")
+    meta(name="viewport", content="width=device-width,initial-scale=1")
     title Cloud Castle
+    <!--[if lt IE 9]>
+    <script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+    <script src="//cdn.jsdelivr.net/es5.shim/4.5.0/es5-shim.min.js"></script>
+    <![endif]-->
     link(href='/assets/common.css', rel='stylesheet')
   body
-    header.header.header__fixed
+    header.header
         .header__container
+            button(type="button", data-toggle="collapse", data-target="#header-collapsing-block").header__toggler.collapsed ☰
             a(href="/").header__logo
                 img(src="/assets/logo.svg", alt="Cloud Castle")
-            ul.menu.header__menu
-                li.menu__item: a(href="#about").menu__link About
-                li.menu__item: a(href="#meetings").menu__link Meetings
-                li.menu__item: a(href="#events").menu__link Events
-                li.menu__item: a(href="#projects").menu__link Projects
-                li.menu__item: a(href="#contact-us").menu__link Contact Us
-                li.menu__item
-                    a(href="https://twitter.com/castledigital", target="_blank", title="Twitter").menu__link.menu__link_icon
-                        img(src="/assets/twitter.svg", alt="Twitter")
-                li.menu__item
-                    a(href="http://facebook.com/cloudcastler", target="_blank", title="Facebook").menu__link.menu__link_icon
-                        img(src="/assets/facebook.svg", alt="Facebook")
-                li.menu__item
-                    a(href="//cloudcastle.ru" title="Go to russian version").menu__link.menu__link_icon: span.header__language EN
+            #header-collapsing-block.header__collapsing-block.collapse
+                ul.menu.header__menu
+                    li.menu__item: a(href="#about").menu__link About
+                    li.menu__item: a(href="#meetings").menu__link Meetings
+                    li.menu__item: a(href="#events").menu__link Events
+                    li.menu__item: a(href="#projects").menu__link Projects
+                    li.menu__item: a(href="#contact-us").menu__link Contact Us
+                    li.menu__item.menu__item_icon
+                        a(href="https://twitter.com/castledigital", target="_blank", title="Twitter").menu__link.menu__link_icon
+                            img(src="/assets/twitter.svg", alt="Twitter")
+                    li.menu__item.menu__item_icon
+                        a(href="http://facebook.com/cloudcastler", target="_blank", title="Facebook").menu__link.menu__link_icon
+                            img(src="/assets/facebook.svg", alt="Facebook")
+                    li.menu__item.menu__item_icon
+                        a(href="//cloudcastle.ru" title="Go to russian version").menu__link.menu__link_icon: span.header__language EN
 
     .content
         .banner
@@ -54,3 +63,6 @@ html(lang="en")
             .office-list__item
                 .office-list__city Samara, Russia
                 .office-list__address Moskovskoe Hw. 4,<br />bld 15, floor 5<br />+7 (846) 313 2303
+
+    script(type="text/javascript", src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.2/jquery.min.js")
+    script(type="text/javascript", src="/assets/all.js")

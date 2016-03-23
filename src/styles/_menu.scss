@@ -5,14 +5,19 @@
 }
 
 .menu__item {
-  display: inline-block;
-  vertical-align: top;
-  @include rem(margin, 0 25px);
+  display: block;
+  text-align: center;
+  @include rem(margin, 5px 5px);
+
+  &_icon {
+    display: inline-block;
+    @include rem(margin, 5px 25px);
+  }
 }
 
 .menu__link {
   display: block;
-  line-height: 80px;
+  line-height: 50px;
   text-decoration: none;
   position: relative;
   text-transform: uppercase;
@@ -41,8 +46,20 @@
       opacity: 0;
     }
   }
+}
 
-  &_language {
-
+@include media-breakpoint-up(md) {
+  .menu__item {
+    display: inline-block;
+    vertical-align: top;
+    @include rem(margin, 0 20px);
+  }
+  .menu__link {
+    line-height: 80px;
+  }
+}
+@include media-breakpoint-up(lg) {
+  .menu__item {
+    @include rem(margin, 0 25px);
   }
 }

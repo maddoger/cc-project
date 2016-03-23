@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
+var concat = require('gulp-concat');
 
 gulp.task('webserver', function () {
     gulp.src('app')
@@ -16,9 +17,8 @@ gulp.task('webserver', function () {
 
 gulp.task('styles', function () {
     gulp.src('src/styles/[^_]*.scss')
-
-        .pipe(sourcemaps.init())
         .pipe(plumber())
+        .pipe(sourcemaps.init())
         .pipe(sass({
             //outputStyle: 'compressed',
             includePaths: [
@@ -58,4 +58,17 @@ gulp.task('images', function(){
        .pipe(gulp.dest('app/assets'));
 });
 
-gulp.task('default', ['jade', 'styles', 'images', 'watch-jade', 'watch-styles', 'webserver']);
+gulp.task('js', function () {
+    gulp.src('src/js/*.js')
+        .pipe(plumber())
+        .pipe(sourcemaps.init())
+        .pipe(concat('all.js'))
+        .pipe(sourcemaps.write('./'))
+        .pipe(gulp.dest('app/assets'))
+});
+
+gulp.task('watch-js', function () {
+    gulp.watch('src/js/**/*.js', ['js']);
+});
+
+gulp.task('default', ['jade', 'styles', 'images', 'js', 'watch-jade', 'watch-styles', 'watch-js', 'webserver']);

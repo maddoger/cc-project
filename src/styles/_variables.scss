@@ -1,11 +1,13 @@
 //Шрифты
 
-$font-family-base: Arial;
-$font-size-root: 14px;
+$font-family-base: Arial !default;
+$font-size-root: 14px !default;
 
-$text-color: #000;
-$link-color: #000;
-$link-hover-color: #000;
+$text-color: #000 !default;
+$link-color: #000 !default;
+$link-hover-color: #000 !default;
+
+$spacer: 20px !default;
 
 $grid-breakpoints: (
         xs: 0,

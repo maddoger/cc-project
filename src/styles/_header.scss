@@ -21,16 +21,44 @@
   line-height: 80px;
 }
 
-.header__menu {
-  float: right;
-}
-
 .header__language {
   vertical-align: top;
   background: #1e1a33;
   color: #fff;
   font-family: Arial, sans-serif;
-  font-size: 9px;
+  @include rem-font-size(9px);
   font-weight: bold;
   padding: 1px 3px;
+}
+
+.header__toggler {
+  display: block;
+  float: right;
+  border: none;
+  background: none;
+  @include rem-font-size(32px);
+  vertical-align: middle;
+  outline: none;
+  padding: 0;
+  line-height: 30px;
+  margin: 25px 0;
+}
+
+.header__collapsing-block {
+  text-align: center;
+}
+
+//Стили для обычного меню
+@include media-breakpoint-up(md) {
+
+  .header__toggler {
+    display: none;
+  }
+
+  .header__collapsing-block {
+    float: right;
+    display: block;
+    height: auto !important;
+    text-align: right;
+  }
 }
