@@ -1,31 +1,32 @@
 .section-title {
   display: block;
   width: 100%;
-  max-width: 640px;
-  height: 80px;
   position: relative;
-  background: #fad35d;
 
   @include media-breakpoint-up(lg) {
     &_left {
-      margin-left: 320px;
+      padding-left: 320px;
     }
     &_right {
-      margin-right: 320px;
+      padding-right: 320px;
+      text-align: right;
     }
   }
 }
 
 .section-title__title {
-  //background: #ffff00;
-  display: block;
-  padding: 10px;
+  background: #fad35d;
+  outline: none;
+  display: inline-block;
   text-align: right;
   font-family: $font-family-cond;
   text-transform: uppercase;
   @include rem-font-size(36px);
   color: #5c4b4c;
   line-height: 60px;
+  width: 100%;
+  max-width: 640px;
+  padding: 10px;
   text-decoration: none;
 }
 
@@ -40,4 +41,20 @@
   width: 42px;
   margin-top: -5px;
   text-align: center;
+}
+
+.section-title_meetings {
+  .section-title__title {
+    background: #fad35d;
+  }
+}
+.section-title_events {
+  .section-title__title {
+    background: #90d0ce;
+  }
+}
+.section-title_projects {
+  .section-title__title {
+    background: #f67e79;
+  }
 }

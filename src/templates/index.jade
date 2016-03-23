@@ -35,8 +35,8 @@ html(lang="en")
         .content
             .section.section-team-preview
                 .teaser
-                    img(src="/content/team/team.jpg").teaser__image
-                    .teaser__description.teaser__description_position_bottom
+                    .teaser__image-container: img(src="/content/team/team.jpg").teaser__image
+                    .teaser__description
                         .teaser__title Team
                         .teaser__text A team comprises a group of people or animals linked in a common purpose.
 
@@ -44,65 +44,130 @@ html(lang="en")
                 .section__row
                     .section__column.section__column_big
                         .teaser.teaser_big-square.section-team__info
-                            img(src="/content/team/team-2.png").teaser__image.teaser__image_full
-                            .teaser__description.teaser__description_position_bottom
+                            .teaser__image-container: img(src="/content/team/team-2.png").teaser__image.teaser__image_full
+                            .teaser__description
                                 .teaser__title Awesome design. Great code. Crazy team.
                                 .teaser__text We have the experience, team and process to bring ideas from concept to launch and beyond. Since our founding in 2009, we've launched over 25 new products.
 
                     .section__column.section__column_right.section-team__development
                         .teaser.teaser_small-square.teaser_bg_white
                             //img(src="/content/team-2.jpg").teaser__image
-                            .teaser__description.teaser__description_position_bottom
+                            .teaser__description
                                 .teaser__title Development
                                 .teaser__text Check out the timeline<br/>and be happy, dude.
 
                         .teaser.teaser_small-square.section-team__design
-                            img(src="/content/team/design.jpg").teaser__image
-                            .teaser__description.teaser__description_position_bottom
+                            .teaser__image-container: img(src="/content/team/design.jpg").teaser__image.teaser__image_position_right
+                            .teaser__description
                                 .teaser__title Design
                                 .teaser__text Check out the timeline<br/>and be happy, dude.
 
                     .section__column.section__column_right.section-team__work
                         .teaser.teaser_long-rectangle
-                            img(src="/content/team/work.jpg").teaser__image
-                            .teaser__description.teaser__description_position_bottom
+                            .teaser__image-container: img(src="/content/team/work.jpg").teaser__image
+                            .teaser__description
                                 .teaser__title Work
                                 .teaser__text Check out the timeline<br/>and be happy, dude.
 
 
-            .section-title.section-title_left
-                a(href="#")#meetings.section-title__title Meetings <i class="section-title__icon">+</i>
+            .section-title.section-title_left.section-title_meetings
+                a(href="#meetings")#meetings.section-title__title Meetings <i class="section-title__icon">+</i>
 
             .section.section__grid.section__posts
                 .section__row
                     .section__column.section__column_left
-                        .teaser.teaser_long-rectangle
-                            img(src="/content/meetings/tatyana-simakova.jpg").teaser__image
-                            .teaser__description
-                                .teaser__title Tatiana Simakova
-                                .teaser__text Imagine if the new iPhone 5S was released a long time ago in a galaxy far far away...
+                        .teaser.teaser_long-rectangle.teaser_balloon_right
+                            .teaser__image-container: img(src="/content/meetings/tatyana-simakova.jpg").teaser__image.teaser__image_position_right
+                            .teaser__balloon
+                                .teaser__arrow
+                                .teaser__bg
+                                .teaser__description
+                                    .teaser__title Tatiana Simakova
+                                    .teaser__text Imagine if the new iPhone 5S was released a long time ago in a galaxy far far away...
 
                     .section__column.section__column_left
-                        .teaser.teaser_small-square
-                            img(src="/content/meetings/vitaliy-stadnikov.jpg").teaser__image
-                            .teaser__description
-                                .teaser__title Vitaliy Stadnikov
-                                .teaser__text Imagine if the new iPhone 5S was released a long time ago in a galaxy far far away...
+                        .teaser.teaser_small-square.teaser__placeholder
 
                         .teaser.teaser_small-square
-                            img(src="/content/meetings/vitaliy-stadnikov.jpg").teaser__image
-                            .teaser__description
+                            .teaser__image-container: img(src="/content/meetings/vitaliy-stadnikov.jpg").teaser__image
+                            .teaser__description.teaser__description_on-hover
                                 .teaser__title Vitaliy Stadnikov
                                 .teaser__text Imagine if the new iPhone 5S was released a long time ago in a galaxy far far away...
 
                     .section__column.section__column_big
                         .teaser.teaser_big-square
-                            img(src="/content/meetings/daria-biryukova.jpg").teaser__image
+                            .teaser__image-container: img(src="/content/meetings/daria-biryukova.jpg").teaser__image
                             .teaser__description
                                 .teaser__number #11
-                                .teaser__title Daria Biryukova
+                                .teaser__title Daria<br />Biryukova
                                 .teaser__text Imagine if the new iPhone 5S was released a long time ago in a galaxy far far away...
-                                a(href="#more").teaser__more Подробнее
+                                a(href="#more").teaser__more +
+
+            .section-title.section-title_right.section-title_events
+                a(href="#events")#events.section-title__title Events <i class="section-title__icon">+</i>
+
+            .section.section__grid.section__posts
+                .section__row
+                    .section__column.section__column_big
+                        .teaser.teaser_big-square
+                            .teaser__image-container: img(src="/content/events/jetbrains-festival.jpg").teaser__image.teaser__image_position_right
+                            .teaser__description.teaser__description_color_white.teaser__description_position_right
+                                .teaser__title JetBrains<br />two-days<br />festival
+                                .teaser__text Imagine if the new iPhone 5S was<br />released a long time ago in a galaxy<br />far far away...
+                                a(href="#more").teaser__more +
+
+                    .section__column.section__column_left
+                        .teaser.teaser_small-square.teaser__placeholder
+
+                        .teaser.teaser_small-square
+                            .teaser__image-container: img(src="/content/events/404.jpg").teaser__image
+                            .teaser__description.teaser__description_color_white.teaser__description_on-hover
+                                .teaser__title 404 fest
+                                .teaser__text Imagine if the new iPhone 5S was released a long time ago in a galaxy far far away...
+
+                    .section__column.section__column_left
+                        .teaser.teaser_long-rectangle.teaser_balloon_left
+                            .teaser__image-container: img(src="/content/events/jetbrains-conference.jpg").teaser__image
+                            .teaser__balloon
+                                .teaser__arrow
+                                .teaser__bg
+                                .teaser__description
+                                    .teaser__title.teaser__title_size_small JetBrains conference
+                                    .teaser__text Imagine if the new iPhone 5S was released a long time ago in a galaxy far far away...
+
+            .section-title.section-title_left.section-title_projects
+                a(href="#projects")#projects.section-title__title Projects <i class="section-title__icon">+</i>
+
+            .section.section__grid.section__posts
+                .section__row
+                    .section__column.section__column_left
+                        .teaser.teaser_long-rectangle.teaser_balloon_right
+                            .teaser__image-container: img(src="/content/projects/basiliq-interface.jpg").teaser__image.teaser__image_position_right
+                            .teaser__balloon
+                                .teaser__arrow
+                                .teaser__bg
+                                .teaser__description
+                                    .teaser__title Basiliq interface
+                                    .teaser__text Imagine if the new iPhone 5S was released a long time ago in a galaxy far far away...
+
+                    .section__column.section__column_left
+                        .teaser.teaser_small-square.teaser__placeholder
+
+                        .teaser.teaser_small-square
+                            .teaser__image-container: img(src="/content/projects/death-start.jpg").teaser__image
+                            .teaser__description.teaser__description_color_white.teaser__description_on-hover
+                                .teaser__title Death Start
+                                .teaser__text Imagine if the new iPhone 5S was released a long time ago in a galaxy far far away...
+
+                    .section__column.section__column_big
+                        .teaser.teaser_big-square
+                            .teaser__image-container: img(src="/content/projects/house-account.jpg").teaser__image
+                            .teaser__description
+                                .teaser__title House<br />Account
+                                .teaser__text Imagine if the new iPhone 5S was released a long time ago in a galaxy far far away...
+                                a(href="#more").teaser__more +
+
+
 
 
         footer.footer

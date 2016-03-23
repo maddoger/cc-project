@@ -1,24 +1,30 @@
-
-
 .section-team {
 
-  .teaser_big-square {
-
-  }
 }
+
 .section-team__info {
   .teaser__image {
-    bottom: 60%;
+    bottom: 80%;
   }
   @include media-breakpoint-down(md) {
     height: 500px;
   }
+  @include media-breakpoint-up(md) {
+    .teaser__image {
+      bottom: 70%;
+    }
+  }
 }
+
 .section-team__design, .section-team__work, .section-team__development {
   .teaser__title {
     text-transform: uppercase;
   }
 }
+.section-team__design {
+  background: #90cdd1;
+}
+
 .section-team__info {
   .teaser__description {
     text-align: center;
