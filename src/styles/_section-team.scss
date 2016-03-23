@@ -1,0 +1,32 @@
+
+
+.section-team {
+
+  .teaser_big-square {
+
+  }
+}
+.section-team__info {
+  .teaser__image {
+    bottom: 60%;
+  }
+  @include media-breakpoint-down(md) {
+    height: 500px;
+  }
+}
+.section-team__design, .section-team__work, .section-team__development {
+  .teaser__title {
+    text-transform: uppercase;
+  }
+}
+.section-team__info {
+  .teaser__description {
+    text-align: center;
+  }
+  .teaser__title {
+    font-family: $font-family-thin;
+    @include rem-font-size(40px);
+    color: #483435;
+    margin-bottom: 40px;
+  }
+}

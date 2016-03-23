@@ -1,7 +1,11 @@
 //Шрифты
 
-$font-family-base: Arial !default;
-$font-size-root: 14px !default;
+$font-family-base: 'helioscregular', Arial, serif !default;
+$font-family-light: 'helioslightcregular', Arial, serif !default;
+$font-family-thin: 'heliosthincregular', Arial, serif !default;
+$font-family-cond: 'helioscondcregular', Arial, serif !default;
+
+$font-size-root: 13px !default;
 
 $text-color: #000 !default;
 $link-color: #000 !default;
@@ -13,7 +17,7 @@ $grid-breakpoints: (
         xs: 0,
         sm: 544px,
         md: 768px,
-        lg: 992px,
+        lg: 980px,
         xl: 1200px,
         xxl: 1440px,
 ) !default;

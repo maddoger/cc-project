@@ -21,6 +21,7 @@
   text-decoration: none;
   position: relative;
   text-transform: uppercase;
+  @include rem-font-size(12px);
 
   &:after {
     content: "";
@@ -58,11 +59,13 @@
     line-height: 80px;
   }
 }
+
 @include media-breakpoint-up(md, (md: 800px)) {
   .menu__item {
     @include rem(margin, 0 20px);
   }
 }
+
 @include media-breakpoint-up(md, (md: 900px)) {
   .menu__item {
     @include rem(margin, 0 25px);

@@ -1,0 +1,27 @@
+.section-team-preview {
+
+  color: #fff;
+  .teaser {
+    height: 160px;
+    background: #90ccd1;
+  }
+  .teaser__description {
+    width: 370px;
+  }
+  .teaser__title {
+    text-transform: uppercase;
+  }
+  .teaser__image {
+    position: absolute;
+    bottom: auto;
+    left: 370px;
+    top: 0;
+    height: auto;
+    transform: none;
+
+    @include media-breakpoint-up(xxl) {
+      left: auto;
+      right: 0;
+    }
+  }
+}

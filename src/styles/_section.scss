@@ -1,0 +1,46 @@
+.section {
+  display: block;
+  @include clearfix;
+}
+
+.section__grid {
+  @include media-breakpoint-up(lg) {
+    display: table;
+    width: 100%;
+  }
+}
+
+.section__row {
+  @include media-breakpoint-up(lg) {
+    display: table-row;
+  }
+}
+
+.section__column {
+  display: block;
+
+  @include media-breakpoint-between(sm, md) {
+    vertical-align: top;
+    &_left {
+      float: left;
+      width: 50%;
+    }
+    &_right {
+      float: left;
+      width: 50%;
+    }
+    &_big {
+      clear: both;
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    display: table-cell;
+    vertical-align: top;
+    width: 320px;
+    &_big {
+      width: auto;
+    }
+  }
+}

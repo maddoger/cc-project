@@ -2,13 +2,19 @@
 @import "clearfix";
 @import "rem";
 @import "breakpoints";
+@import "gradients";
 @import "normalize";
+@import "fonts";
 @import "base";
 @import "collapse";
-
 //Блоки
 @import "menu";
 @import "header";
 @import "content";
 @import "office-list";
 @import "footer";
+@import "teaser";
+@import "section";
+@import "section-title";
+@import "section-team-preview";
+@import "section-team";

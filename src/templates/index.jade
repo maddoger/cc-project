@@ -1,68 +1,135 @@
 doctype html
 html(lang="en")
-  head
-    meta(charset="utf-8")
-    meta(name="viewport", content="width=device-width,initial-scale=1")
-    title Cloud Castle
-    <!--[if lt IE 9]>
-    <script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
-    <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
-    <script src="//cdn.jsdelivr.net/es5.shim/4.5.0/es5-shim.min.js"></script>
-    <![endif]-->
-    link(href='/assets/common.css', rel='stylesheet')
-  body
-    header.header
-        .header__container
-            button(type="button", data-toggle="collapse", data-target="#header-collapsing-block").header__toggler.collapsed ☰
-            a(href="/").header__logo
-                img(src="/assets/logo.svg", alt="Cloud Castle")
-            #header-collapsing-block.header__collapsing-block.collapse
-                ul.menu.header__menu
-                    li.menu__item: a(href="#about").menu__link About
-                    li.menu__item: a(href="#meetings").menu__link Meetings
-                    li.menu__item: a(href="#events").menu__link Events
-                    li.menu__item: a(href="#projects").menu__link Projects
-                    li.menu__item: a(href="#contact-us").menu__link Contact Us
-                    li.menu__item.menu__item_icon
-                        a(href="https://twitter.com/castledigital", target="_blank", title="Twitter").menu__link.menu__link_icon
-                            img(src="/assets/twitter.svg", alt="Twitter")
-                    li.menu__item.menu__item_icon
-                        a(href="http://facebook.com/cloudcastler", target="_blank", title="Facebook").menu__link.menu__link_icon
-                            img(src="/assets/facebook.svg", alt="Facebook")
-                    li.menu__item.menu__item_icon
-                        a(href="//cloudcastle.ru" title="Go to russian version").menu__link.menu__link_icon: span.header__language EN
+    head
+        meta(charset="utf-8")
+        meta(name="viewport", content="width=device-width,initial-scale=1")
+        title Cloud Castle
+        <!--[if lt IE 9]>
+        <script src="//cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="//cdn.jsdelivr.net/respond/1.4.2/respond.min.js"></script>
+        <script src="//cdn.jsdelivr.net/es5.shim/4.5.0/es5-shim.min.js"></script>
+        <![endif]-->
+        link(href='/assets/common.css', rel='stylesheet')
+    body
+        header.header.header__fixed
+            .header__container
+                button(type="button", data-toggle="collapse", data-target="#header-collapsing-block").header__toggler.collapsed ☰
+                a(href="/").header__logo
+                    img(src="/assets/logo.svg", alt="Cloud Castle")
+                #header-collapsing-block.header__collapsing-block.collapse
+                    ul.menu.header__menu
+                        li.menu__item: a(href="#about").menu__link About
+                        li.menu__item: a(href="#meetings").menu__link Meetings
+                        li.menu__item: a(href="#events").menu__link Events
+                        li.menu__item: a(href="#projects").menu__link Projects
+                        li.menu__item: a(href="#contact-us").menu__link Contact Us
+                        li.menu__item.menu__item_icon
+                            a(href="https://twitter.com/castledigital", target="_blank", title="Twitter").menu__link.menu__link_icon
+                                img(src="/assets/twitter.svg", alt="Twitter")
+                        li.menu__item.menu__item_icon
+                            a(href="http://facebook.com/cloudcastler", target="_blank", title="Facebook").menu__link.menu__link_icon
+                                img(src="/assets/facebook.svg", alt="Facebook")
+                        li.menu__item.menu__item_icon
+                            a(href="//cloudcastle.ru" title="Go to russian version").menu__link.menu__link_icon: span.header__language EN
 
-    .content
-        .banner
-            a(href="#team")
-                .banner__title Team
-                .banner__text A team comprises a group of people or animals linked in a common purpose.
+        .content
+            .section.section-team-preview
+                .teaser
+                    img(src="/content/team/team.jpg").teaser__image
+                    .teaser__description.teaser__description_position_bottom
+                        .teaser__title Team
+                        .teaser__text A team comprises a group of people or animals linked in a common purpose.
 
-    footer.footer
-        .footer__contacts
-            .footer__phone +1 866 498 3588
-            a(href="mailto:hello@cloudcastlegroup.com").footer__email hello@cloudcastlegroup.com
-            .footer__social
-                a(href="https://www.linkedin.com/company/9415080", target="_blank", title="LinkedIn").footer__social-link
-                    img(src="/assets/linkedin.svg", alt="LinkedIn")
-                a(href="https://twitter.com/castledigital", target="_blank", title="Twitter").footer__social-link
-                    img(src="/assets/twitter.svg", alt="Twitter")
-                a(href="http://facebook.com/cloudcastler", target="_blank", title="Facebook").footer__social-link
-                    img(src="/assets/facebook.svg", alt="Facebook")
+            #about.section.section__grid.section-team
+                .section__row
+                    .section__column.section__column_big
+                        .teaser.teaser_big-square.section-team__info
+                            img(src="/content/team/team-2.png").teaser__image.teaser__image_full
+                            .teaser__description.teaser__description_position_bottom
+                                .teaser__title Awesome design. Great code. Crazy team.
+                                .teaser__text We have the experience, team and process to bring ideas from concept to launch and beyond. Since our founding in 2009, we've launched over 25 new products.
 
-        .office-list.footer__offices
-            .office-list__item
-                .office-list__city New York, NY
-                .office-list__address 110 E 25th St.<br />New York, NY 10010
-            .office-list__item
-                .office-list__city Charlotte, NC
-                .office-list__address 2820 Selwyn Ave.<br />Suite 325<br />Charlotte, NC 28209
-            .office-list__item
-                .office-list__city Los Angeles, CA
-                .office-list__address 6121 Sunset Blvd.<br />Los Angeles, CA 90028
-            .office-list__item
-                .office-list__city Samara, Russia
-                .office-list__address Moskovskoe Hw. 4,<br />bld 15, floor 5<br />+7 (846) 313 2303
+                    .section__column.section__column_right.section-team__development
+                        .teaser.teaser_small-square.teaser_bg_white
+                            //img(src="/content/team-2.jpg").teaser__image
+                            .teaser__description.teaser__description_position_bottom
+                                .teaser__title Development
+                                .teaser__text Check out the timeline<br/>and be happy, dude.
 
-    script(type="text/javascript", src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.2/jquery.min.js")
-    script(type="text/javascript", src="/assets/all.js")
+                        .teaser.teaser_small-square.section-team__design
+                            img(src="/content/team/design.jpg").teaser__image
+                            .teaser__description.teaser__description_position_bottom
+                                .teaser__title Design
+                                .teaser__text Check out the timeline<br/>and be happy, dude.
+
+                    .section__column.section__column_right.section-team__work
+                        .teaser.teaser_long-rectangle
+                            img(src="/content/team/work.jpg").teaser__image
+                            .teaser__description.teaser__description_position_bottom
+                                .teaser__title Work
+                                .teaser__text Check out the timeline<br/>and be happy, dude.
+
+
+            .section-title.section-title_left
+                a(href="#")#meetings.section-title__title Meetings <i class="section-title__icon">+</i>
+
+            .section.section__grid.section__posts
+                .section__row
+                    .section__column.section__column_left
+                        .teaser.teaser_long-rectangle
+                            img(src="/content/meetings/tatyana-simakova.jpg").teaser__image
+                            .teaser__description
+                                .teaser__title Tatiana Simakova
+                                .teaser__text Imagine if the new iPhone 5S was released a long time ago in a galaxy far far away...
+
+                    .section__column.section__column_left
+                        .teaser.teaser_small-square
+                            img(src="/content/meetings/vitaliy-stadnikov.jpg").teaser__image
+                            .teaser__description
+                                .teaser__title Vitaliy Stadnikov
+                                .teaser__text Imagine if the new iPhone 5S was released a long time ago in a galaxy far far away...
+
+                        .teaser.teaser_small-square
+                            img(src="/content/meetings/vitaliy-stadnikov.jpg").teaser__image
+                            .teaser__description
+                                .teaser__title Vitaliy Stadnikov
+                                .teaser__text Imagine if the new iPhone 5S was released a long time ago in a galaxy far far away...
+
+                    .section__column.section__column_big
+                        .teaser.teaser_big-square
+                            img(src="/content/meetings/daria-biryukova.jpg").teaser__image
+                            .teaser__description
+                                .teaser__number #11
+                                .teaser__title Daria Biryukova
+                                .teaser__text Imagine if the new iPhone 5S was released a long time ago in a galaxy far far away...
+                                a(href="#more").teaser__more Подробнее
+
+
+        footer.footer
+            .footer__contacts
+                .footer__phone +1 866 498 3588
+                a(href="mailto:hello@cloudcastlegroup.com").footer__email hello@cloudcastlegroup.com
+                .footer__social
+                    a(href="https://www.linkedin.com/company/9415080", target="_blank", title="LinkedIn").footer__social-link
+                        img(src="/assets/linkedin.svg", alt="LinkedIn")
+                    a(href="https://twitter.com/castledigital", target="_blank", title="Twitter").footer__social-link
+                        img(src="/assets/twitter.svg", alt="Twitter")
+                    a(href="http://facebook.com/cloudcastler", target="_blank", title="Facebook").footer__social-link
+                        img(src="/assets/facebook.svg", alt="Facebook")
+
+            .office-list.footer__offices
+                .office-list__item
+                    .office-list__city New York, NY
+                    .office-list__address 110 E 25th St.<br />New York, NY 10010
+                .office-list__item
+                    .office-list__city Charlotte, NC
+                    .office-list__address 2820 Selwyn Ave.<br />Suite 325<br />Charlotte, NC 28209
+                .office-list__item
+                    .office-list__city Los Angeles, CA
+                    .office-list__address 6121 Sunset Blvd.<br />Los Angeles, CA 90028
+                .office-list__item
+                    .office-list__city Samara, Russia
+                    .office-list__address Moskovskoe Hw. 4,<br />bld 15, floor 5<br />+7 (846) 313 2303
+
+        script(type="text/javascript", src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.12.2/jquery.min.js")
+        script(type="text/javascript", src="/assets/all.js")
