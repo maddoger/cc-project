@@ -6,6 +6,8 @@ var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var plumber = require('gulp-plumber');
 var concat = require('gulp-concat');
+var csso = require('gulp-csso');
+var uglify = require('gulp-uglify');
 
 gulp.task('webserver', function () {
     gulp.src('app')
@@ -33,6 +35,7 @@ gulp.task('styles', function () {
             browsers: ['last 10 versions', '> 1%'],
             cascade: true
         }))
+        .pipe(csso())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('app/assets'))
 });
@@ -68,6 +71,7 @@ gulp.task('js', function () {
         .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(concat('all.js'))
+        .pipe(uglify())
         .pipe(sourcemaps.write('./'))
         .pipe(gulp.dest('app/assets'))
 });
